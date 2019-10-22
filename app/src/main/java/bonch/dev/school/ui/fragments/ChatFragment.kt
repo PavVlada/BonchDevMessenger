@@ -9,25 +9,24 @@ import androidx.fragment.app.Fragment
 import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
 
-class ProfileFragment : Fragment(){
+class ChatFragment : Fragment() {
 /*
-    private lateinit var changePasswordButton: Button
+    private lateinit var sendMessageButton: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_chat, container, false)
+        sendMessageButton = view.findViewById(R.id.send_message_button)
 
-        val passwordFragment = PasswordFragment()
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
-
-        changePasswordButton = view.findViewById(R.id.change_password_button)
-        changePasswordButton.setOnClickListener{
-            passwordFragment.show((context as MainAppActivity).fm, "dialog_tag")
-        }
+        sendMessageButton.setOnClickListener(View.OnClickListener {
+            (context as MainAppActivity).replaceFragment()
+        })
         return view
     }
+
 
  */
 }

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.activities.SignUpActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Регистрация"
+        android:textSize="32dp"/>
+
+    <EditText
+        android:id="@+id/email_sign_up_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#4DFFFFFF"
+        android:ems="10"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Почта"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/login_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#4DFFFFFF"
+        android:ems="10"
+        android:hapticFeedbackEnabled="false"
+        android:hint="Логин"/>
+
+    <EditText
+        android:id="@+id/password_sign_up_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#4DFFFFFF"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/password_confirm_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="#4DFFFFFF"
+        android:ems="10"
+        android:hint="Подтвердите пароль"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/complete_sign_up_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/custom_button"
+        android:hint="Зарегестрироваться"
+        android:shadowColor="#2B2B2B" />
+
+
+</LinearLayout>
