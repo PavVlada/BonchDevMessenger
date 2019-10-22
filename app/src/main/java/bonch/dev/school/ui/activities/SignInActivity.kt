@@ -13,22 +13,22 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.sign_in_activity)
 
         signInButton = findViewById(R.id.sign_in_button)
         signUpButton = findViewById(R.id.sign_up_button)
 
-     /*   signInButton.setOnClickListener(){
+        signInButton.setOnClickListener(){
             val intent = Intent(this, MainAppActivity::class.java)
             startActivity(intent)
         }
 
-      */
-     /*   signUpButton.setOnClickListener(){
+        signUpButton.setOnClickListener(){
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 
-      */
+
     }
 
 

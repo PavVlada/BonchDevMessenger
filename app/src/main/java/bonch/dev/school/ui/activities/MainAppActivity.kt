@@ -7,7 +7,7 @@ import bonch.dev.school.ui.fragments.ChatFragment
 import bonch.dev.school.ui.fragments.ProfileFragment
 
 class MainAppActivity : AppCompatActivity() {
-/*
+
     val fm = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,4 @@ class MainAppActivity : AppCompatActivity() {
             .addToBackStack("profile_fragment")
             .commit()
     }
-
-
- */
 }

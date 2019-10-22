@@ -12,6 +12,7 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.sign_up_activity)
 
         completeSignUpButton = findViewById(R.id.complete_sign_up_button)
 

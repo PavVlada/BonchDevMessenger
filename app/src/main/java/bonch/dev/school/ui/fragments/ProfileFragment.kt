@@ -10,7 +10,7 @@ import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
 
 class ProfileFragment : Fragment(){
-/*
+
     private lateinit var changePasswordButton: Button
 
     override fun onCreateView(
@@ -29,5 +29,4 @@ class ProfileFragment : Fragment(){
         return view
     }
 
- */
 }

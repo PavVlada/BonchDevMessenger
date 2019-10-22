@@ -10,7 +10,7 @@ import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
 
 class ChatFragment : Fragment() {
-/*
+
     private lateinit var sendMessageButton: Button
 
     override fun onCreateView(
@@ -27,6 +27,4 @@ class ChatFragment : Fragment() {
         return view
     }
 
-
- */
 }

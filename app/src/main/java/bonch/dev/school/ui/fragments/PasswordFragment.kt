@@ -8,7 +8,7 @@ import androidx.fragment.app.DialogFragment
 import bonch.dev.school.R
 
 class PasswordFragment : DialogFragment() {
-/*
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -18,5 +18,4 @@ class PasswordFragment : DialogFragment() {
         return view
     }
 
- */
 }
