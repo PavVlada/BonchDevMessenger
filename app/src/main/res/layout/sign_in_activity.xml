@@ -22,7 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hapticFeedbackEnabled="false"
         android:hint="Почта"
@@ -33,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hint="Пароль"
         android:inputType="textPassword" />
@@ -44,14 +46,17 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:background="@drawable/custom_button"
-        android:hint="Войти" />
+        android:hint="Войти"
+        android:textColorHint="#B9FFFFFF" />
 
     <Button
         android:id="@+id/sign_up_button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
-        android:hint="Зарегестрироваться" />
+        android:hint="Зарегестрироваться"
+        android:shadowColor="#00FFFFFF"
+        android:textColorHint="#B9FFFFFF" />
 
 
 </LinearLayout>

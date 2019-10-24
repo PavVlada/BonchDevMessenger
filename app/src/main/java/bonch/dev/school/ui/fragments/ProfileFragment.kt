@@ -18,7 +18,6 @@ class ProfileFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val passwordFragment = PasswordFragment()
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 

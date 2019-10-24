@@ -7,6 +7,9 @@
     android:background="@drawable/gradient_background"
     tools:context=".ui.fragments.ChatFragment">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -29,7 +32,8 @@
         <EditText
             android:id="@+id/message_et"
             android:layout_width="0dp"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
             android:background="#4DFFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/send_message_button"
@@ -42,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.70" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

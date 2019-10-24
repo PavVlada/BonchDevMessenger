@@ -22,7 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hapticFeedbackEnabled="false"
         android:hint="Почта"
@@ -33,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hapticFeedbackEnabled="false"
         android:hint="Логин"/>
@@ -43,7 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hint="Пароль"
         android:inputType="textPassword" />
@@ -53,7 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="#4DFFFFFF"
+        android:background="@drawable/custom_edit_text"
+        android:padding="5dp"
         android:ems="10"
         android:hint="Подтвердите пароль"
         android:inputType="textPassword" />
@@ -65,7 +69,8 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/custom_button"
         android:hint="Зарегестрироваться"
-        android:shadowColor="#2B2B2B" />
+        android:shadowColor="#174D8F"
+        android:textColorHint="#B9FFFFFF" />
 
 
 </LinearLayout>
