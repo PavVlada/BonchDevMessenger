@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.84000003" />
 
 
     <LinearLayout
@@ -42,7 +42,7 @@
             android:padding="5dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Котик Котиков" />
+            android:hint="Котик Котиков" />
 
         <EditText
             android:id="@+id/email_text_view"
@@ -54,7 +54,7 @@
             android:ems="10"
             android:hapticFeedbackEnabled="false"
             android:inputType="textEmailAddress"
-            android:text="kotik@gmail.com" />
+            android:hint="kotik@gmail.com" />
 
     </LinearLayout>
 
@@ -103,6 +103,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
