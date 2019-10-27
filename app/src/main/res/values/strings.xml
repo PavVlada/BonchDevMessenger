@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Bonch Dev Messenger</string>
+    <string name="menu_chat">Чат</string>
+    <string name="menu_profile">Профиль</string>
 </resources>

@@ -26,9 +26,6 @@ class ChatFragment : Fragment() {
 
         sendMessageButton = view.findViewById(R.id.send_message_button)
 
-        sendMessageButton.setOnClickListener(View.OnClickListener {
-            (context as MainAppActivity).replaceFragment()
-        })
         return view
     }
 
