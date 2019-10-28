@@ -9,13 +9,13 @@ data class Message(val messageId: Int, val messageText: String,
 class MessageLab(){
 
     val messageList: MutableList<Message>
-    var rnd: Int = 0
-    var bool: Boolean = false
+    private var rnd: Int = 0
+    private var bool: Boolean = false
 
     init{
         messageList = mutableListOf()
         for(i in 0..99){
-            rnd = (0..1).random()
+            rnd = (rnd+1)%2
             when(rnd){
                 0 -> bool = false
                 1 -> bool = true
