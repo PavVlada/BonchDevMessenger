@@ -7,9 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import bonch.dev.school.R
+import bonch.dev.school.ui.models.Message
 import bonch.dev.school.ui.models.MessageLab
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import java.sql.Date
+import java.text.SimpleDateFormat
 
 class MessageAdapter : RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
 
@@ -18,8 +21,20 @@ class MessageAdapter : RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
         private const val VIEW_TYPE_USER = 1
     }
 
+
+
     val messageList = MessageLab().messageList
 
+
+    fun addMessage(user_message: String){
+
+        val position: Int = messageList.size
+        val message = Message( position, user_message, Date(System.currentTimeMillis()), true)
+        messageList.add(message)
+
+
+
+    }
     override fun getItemViewType(position: Int): Int = when(messageList[position].isUser){
         true -> VIEW_TYPE_USER
         false -> VIEW_TYPE_OTHER
@@ -41,21 +56,23 @@ class MessageAdapter : RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
 
     inner class MessageHolder(view: View) : RecyclerView.ViewHolder(view){
 
+        val sdf = SimpleDateFormat("dd/MM/yy HH:mm:ss")
+
         fun bind( position: Int){
             if(messageList[position].isUser){
                 val userMessageText = itemView.findViewById<TextView>(R.id.user_message_text)
                 userMessageText.text = messageList[position].messageText
                 val userSentDate = itemView.findViewById<TextView>(R.id.user_sent_date)
-                userSentDate.text = "${messageList[position].sentDate}"
+                userSentDate.text=sdf.format(messageList[position].sentDate)
             }
             else{
 
                 val otherMessageText = itemView.findViewById<TextView>(R.id.other_message_text)
                 otherMessageText.text = messageList[position].messageText
                 val otherSentDate = itemView.findViewById<TextView>(R.id.other_sent_date)
-                otherSentDate.text = "${messageList[position].sentDate}"
+                otherSentDate.text = sdf.format(messageList[position].sentDate)
                 val otherName = itemView.findViewById<TextView>(R.id.other_name)
-                otherName.text = "Kotik"
+                otherName.text = "Котя"
 
                 val otherAvatarImageView =
                     itemView.findViewById<ImageView>(R.id.other_avatar_image_view)

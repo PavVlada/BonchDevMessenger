@@ -8,6 +8,9 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import bonch.dev.school.R
 import bonch.dev.school.ui.activities.MainAppActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : Fragment(){
 
@@ -25,6 +28,7 @@ class ProfileFragment : Fragment(){
         changePasswordButton.setOnClickListener{
             passwordFragment.show((context as MainAppActivity).fm, "dialog_tag")
         }
+
         return view
     }
 
