@@ -22,7 +22,6 @@ class MessageAdapter : RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
     }
 
 
-
     val messageList = MessageLab().messageList
 
 
@@ -84,5 +83,6 @@ class MessageAdapter : RecyclerView.Adapter<MessageAdapter.MessageHolder>(){
             }
         }
     }
+
 
 }

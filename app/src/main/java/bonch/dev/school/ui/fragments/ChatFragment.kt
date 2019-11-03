@@ -1,6 +1,8 @@
 package bonch.dev.school.ui.fragments
 
 import android.os.Bundle
+import android.os.Parcelable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,11 +20,13 @@ import kotlinx.android.synthetic.main.fragment_chat.*
 import kotlinx.android.synthetic.main.fragment_chat.view.*
 import java.sql.Date
 
+private var savedState: Parcelable? = null
+
 class ChatFragment : Fragment() {
 
-    private lateinit var messageRecycler : RecyclerView
-    private lateinit var sendMessageButton : Button
-    private lateinit var messageEt : EditText
+    private lateinit var messageRecycler: RecyclerView
+    private lateinit var sendMessageButton: Button
+    private lateinit var messageEt: EditText
 
 
     private var user_message: String = ""
@@ -39,15 +43,20 @@ class ChatFragment : Fragment() {
         messageRecycler = view.findViewById(R.id.message_recycle_view)
 
         messageRecycler.layoutManager = LinearLayoutManager(container!!.context)
+
+
         messageRecycler.adapter = MessageAdapter()
+
+        (messageRecycler.layoutManager as LinearLayoutManager).onRestoreInstanceState(savedState)
 
         (messageRecycler.scrollToPosition((messageRecycler.adapter as MessageAdapter).messageList.size - 1))
 
-        sendMessageButton.setOnClickListener{
+        sendMessageButton.setOnClickListener {
 
             user_message = messageEt.getText().toString()
 
-            if(!user_message.isBlank()){
+            if (!user_message.isBlank()) {
+                Log.wtf("MyApp", "TXT")
                 messageEt.setText("")
                 (messageRecycler.adapter as MessageAdapter).addMessage(user_message)
                 (messageRecycler.scrollToPosition((messageRecycler.adapter as MessageAdapter).messageList.size - 1))
@@ -55,9 +64,36 @@ class ChatFragment : Fragment() {
         }
 
 
-
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (messageRecycler.layoutManager as LinearLayoutManager).onRestoreInstanceState(savedState)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        savedState = (messageRecycler.layoutManager as LinearLayoutManager).onSaveInstanceState()
+
+    }
+
+    override fun onResume(){
+        super.onResume()
+        (messageRecycler.layoutManager as LinearLayoutManager).onRestoreInstanceState(savedState)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        savedState = (messageRecycler.layoutManager as LinearLayoutManager).onSaveInstanceState()
+
+    }
+
+
+
+
+
+
 
 }
+

@@ -7,11 +7,11 @@ import java.sql.Date
 import java.text.SimpleDateFormat
 
 
-@Parcelize
-data class Message(val messageId: Int, val messageText: String,
-                   val sentDate: Date, val isUser: Boolean): Parcelable
 
-class MessageLab(){
+data class Message(val messageId: Int, val messageText: String,
+                   val sentDate: Date, val isUser: Boolean)
+
+class MessageLab() {
 
     val messageList: MutableList<Message>
     private var bool: Boolean = false
@@ -25,4 +25,5 @@ class MessageLab(){
             messageList.add(message)
         }
     }
+
 }
